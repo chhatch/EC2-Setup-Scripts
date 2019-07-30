@@ -1,3 +1,8 @@
 #!/bin/bash
 
+#push local to ec2
 cat ~/.ssh/id_rsa.pub | ssh -i $1 ubuntu@$2 "cat>> .ssh/authorized_keys"
+
+#to github
+cat ~/.ssh/sf_id_rsa| ssh -i $1 ubuntu@$2 "cat>> .ssh/sf_id_rsa"
+cat ~/.ssh/sf_id_rsa.pub | ssh -i $1 ubuntu@$2 "cat>> .ssh/sf_id_rsa.pub"
