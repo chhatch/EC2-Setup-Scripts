@@ -1,6 +1,6 @@
 # EC2-Setup-Scripts
 
-rsa-ec2 "pem file" "ec2 server ip"
+rsa-ec2 "pem file" "ec2 server ip"\n
   pushes local public key to server for push local ec2
   and pushes git keys for ec2-github communication
   
