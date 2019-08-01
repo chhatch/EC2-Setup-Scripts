@@ -20,6 +20,28 @@ To get this repository run:
   git clone git@github.com:chhatch/EC2-Setup-Scripts.git
 
 
-To run scripts:
+To get scripts and set up project directory:
+
   cd EC2-Setup-Scripts
+  
   bash setup-dir.sh "project name"
+  
+  
+Setup MongoDB:
+
+  bash mongo-setup.sh
+  
+  sudo service mongod start
+  
+  mongo
+  
+  use admin
+  
+  db.createUser(
+  {
+    user: "admin",
+    pwd: "admin123",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+  }
+  )
+  
